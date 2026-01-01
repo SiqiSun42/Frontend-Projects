@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 1</title>
+
+    <style>
+        @font-face {
+            font-family: "Figtree";
+            src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
+            font-weight: 500 800;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Figtree";
+            src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+            font-weight: 500 800;
+            font-style: normal;
+        }
+
+        body{
+            display: flex;
+            margin: 0;
+            background-color: hsl(47, 88%, 63%);
+            font-family: "Figtree", sans-serif;
+        }
+
+        .card{
+            box-sizing: border-box;
+            width: min(384px, 100% - 48px);
+            background-color: white;
+            border-radius: 20px;
+
+            border: 1.8px solid hsl(0, 0%, 7%);
+            box-shadow: 8px 8px 0 hsl(0, 0%, 7%);
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            padding: 25px;
+            margin-inline: auto;
+        }
+
+        .card_image{
+            width: 100%; /* 除了padding以外的宽度填满 */
+            object-fit: cover;
+            border-radius: 15px;
+            display: block; /* 不参与文字对齐，底部无空隙 */
+        }
+
+        .card_content{
+            margin-top: 25px;
+        }
+
+        .tag{
+            text-decoration: none;
+            display: inline-block;
+            background-color: hsl(47,88%,63%);
+            padding: 6px 15px;
+            border-radius: 6px;
+
+            font-weight: 800;
+            font-size: 16px;
+            color: hsl(0, 0%, 7%);
+        }
+
+        .date{
+            font-weight: 500;
+            font-size: 15px;
+            color: hsl(0, 0%, 7%);
+        }
+
+        .title{
+            font-weight: 800;
+            font-size: 24px;
+        }
+
+        .title a {
+            display: inline-block;
+            text-decoration: none;
+            color: hsl(0, 0%, 7%);
+            transition: transform 0.15s ease, color 0.15s ease;
+            transform-origin: left center;
+        }
+
+        .title a:hover{
+            color: hsl(47, 88%, 63%);
+            transform: scale(1.02);
+        }
+
+        .title a:focus-visible{
+            outline: 1.5px solid hsl(0, 0%, 7%);
+            outline-offset: 6px;
+            border-radius: 6px;
+        }
+
+        .desc{
+            font-weight: 500;
+            font-size: 16px;
+            color: hsl(0, 0%, 42%);
+        }
+
+        .author{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .author_avatar{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .author_name{
+            font-weight: 800;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class = "card">
+        <img class = "card_image" src = "./assets/images/illustration-article.svg " alt = "">
+
+        <div class = "card_content">
+            <a href = "#" class ="tag">Learning</a>
+            <p class = "date">Published 31 Dec 2025</p>
+
+            <h1 class = "title">
+                <a href = "#">HTML &amp; CSS foundations</a>
+            </h1>
+
+            <p class = "desc">
+                These languages are the backbone of every website, defining structure, content, and presentation.
+            </p>
+        </div>
+
+        <div class = "author">
+            <img
+                class = "author_avatar"
+                src = "./assets/images/image-avatar.webp"
+                alt = "Avatar of Greg Hooper"
+            >
+            <span class = "author_name">Greg Hooper</span>
+        </div>
+    </div>
+</body>
+</html>
